@@ -1,7 +1,10 @@
 RailsNerdradio::Application.routes.draw do
-  root :to => 'episodes#index'
+  get "posts/index"
+
+  root :to => 'posts#index'
 
   resources :episodes
+  resources :posts
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
