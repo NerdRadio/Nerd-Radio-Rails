@@ -3,6 +3,10 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 gem 'rack', '1.3.3'
 
+gem "mongoid", "~> 2.3"
+gem "bson_ext", "~> 1.4"
+
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
@@ -24,8 +28,9 @@ group :test, :development do
   gem 'sqlite3'
 end
 
-group :production do
-  gem 'pg'
+group :test do
+  gem 'mongoid-rspec'
+  gem 'factory_girl_rails'
 end
 
 # Use unicorn as the web server
